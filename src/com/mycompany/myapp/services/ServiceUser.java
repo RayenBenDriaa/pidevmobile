@@ -10,6 +10,7 @@ import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;
 import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.Task;
 import com.mycompany.myapp.entities.user;
@@ -122,6 +123,18 @@ public class ServiceUser {
         
         */
         return users;
+    }
+     public void removeUser(user c){   
+        
+        Dialog d = new Dialog();
+            if(d.show("Delete User","Do you really want to remove this user","Yes","No"))
+            {             
+                String url = Statics.BASE_URL+"/admin/user/user/apiusers";
+                req.setUrl(Statics.BASE_URL+"/admin/user/user/apiremove?id=" + c.getId_user());
+                NetworkManager.getInstance().addToQueueAndWait(req);
+                
+                d.dispose();
+            }
     }
     
     public ArrayList<user> getAllusers(){
