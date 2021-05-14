@@ -129,8 +129,8 @@ public class ServiceUser {
         Dialog d = new Dialog();
             if(d.show("Delete User","Do you really want to remove this user","Yes","No"))
             {             
-                String url = Statics.BASE_URL+"/admin/user/user/apiusers";
-                req.setUrl(Statics.BASE_URL+"/admin/user/user/apiremove?id=" + c.getId_user());
+                
+                req.setUrl(Statics.BASE_URL+"/admin/user/user/apiremove?id="+c.getId_user());
                 NetworkManager.getInstance().addToQueueAndWait(req);
                 
                 d.dispose();
