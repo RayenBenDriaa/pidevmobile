@@ -30,11 +30,14 @@ public class HomeForm extends Form {
         Button btnAddTask = new Button("Add Task");
         Button btnListTasks = new Button("List Tasks");
         Button btnRemoveUser = new Button ("Delete User");
+        Button btnUpdateUser = new Button("Update User");
+        
 
         btnAddTask.addActionListener(e -> new AddTaskForm(current).show());
         btnListTasks.addActionListener(e -> new ListTasksForm(current).show());
         btnRemoveUser.addActionListener(e-> new RemoveUserForm(current).show());
-        addAll(btnAddTask, btnListTasks,btnRemoveUser);
+            btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser);
 
     }
 
