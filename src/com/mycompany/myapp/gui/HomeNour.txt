@@ -30,3 +30,36 @@ public class HomeForm extends Form {
     
 }
 
+////////////////
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.myapp.entities.gui;
+
+import com.codename1.ui.Button;
+import com.codename1.ui.Form;
+import com.codename1.ui.Label;
+import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.entities.User;
+import com.mycompany.myapp.entities.gui.Sponsor.MenuLocation;
+import com.mycompany.myapp.entities.gui.Evenement.MenuEvent;
+
+/**
+ *
+ * @author wajih
+ */
+public class MenuEventSponsor extends Form{
+    Form current;
+
+    public MenuEventSponsor() {
+                current=this;
+        setTitle("Home");
+        setLayout(BoxLayout.y());
+                User u = new User(1, "wale");
+
+        //BUTTONS
+        add(new Label("Choisissez une option"));
+        Button btnAide = new Button("Gestions des Evenements");
+        Button btnBen = new Button("Gestions des Sponsors");
