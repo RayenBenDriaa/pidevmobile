@@ -102,8 +102,6 @@ public class ServiceReclamation {
                 
                 float id = Float.parseFloat(obj.get("id_recla").toString()) ;
                 t.setId_reclamation((int)id);
-                
-                
                 t.setText_reclamation(obj.get("text").toString());
               
               

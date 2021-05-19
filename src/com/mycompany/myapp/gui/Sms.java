@@ -23,7 +23,7 @@ public class Sms {
         Message message;
         message = Message.creator(new PhoneNumber("+216"+num), // to
                         new PhoneNumber("+16672432429"), // from
-                        "Inscription effectuée avec succès  ")
+                        "Location effectuée avec succès  ")
                 .create();
         System.out.println(message.getSid());
         System.out.println("notif");

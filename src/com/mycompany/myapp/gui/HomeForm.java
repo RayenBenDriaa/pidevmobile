@@ -35,6 +35,16 @@ public class HomeForm extends Form {
         Button btnlistrecla = new Button("List reclamation");
         Button btnremoverecla = new Button("Delete reclamation");
         Button btnupdaterecla = new Button("Update reclamation");
+          Button btnAddVoiture = new Button("Add Voiture");
+        Button btnListVoiture = new Button("List Voiture");
+        Button btnAddLocationv = new Button("Add Location");
+        Button btnListLocationv = new Button("List Location");
+        
+       btnListVoiture.addActionListener(e-> new ListVoitureForm(current).show());
+        btnAddVoiture.addActionListener(e-> new AddVoitureForm(current).show());
+        
+        btnAddLocationv.addActionListener(e-> new AddLocationvForm(current).show());
+        btnListLocationv.addActionListener(e-> new ListLocationvForm(current).show());
         
 
         btnAddTask.addActionListener(e -> new AddTaskForm(current).show());
@@ -42,7 +52,7 @@ public class HomeForm extends Form {
         btnRemoveUser.addActionListener(e-> new RemoveUserForm(current).show());
         btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
         btnlistrecla.addActionListener(e-> new ListReclaForm(current).show());
-        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla);
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnListLocationv);
 
     }
 
