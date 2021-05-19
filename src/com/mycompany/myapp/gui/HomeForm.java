@@ -27,17 +27,22 @@ public class HomeForm extends Form {
         setLayout(BoxLayout.y());
 
         add(new Label("Choose an option"));
-        Button btnAddTask = new Button("Add Task");
-        Button btnListTasks = new Button("List Tasks");
+        Button btnAddTask = new Button("Add user");
+        Button btnListTasks = new Button("List user");
         Button btnRemoveUser = new Button ("Delete User");
         Button btnUpdateUser = new Button("Update User");
+        Button btnAddrecla = new Button("Add reclamation");
+        Button btnlistrecla = new Button("List reclamation");
+        Button btnremoverecla = new Button("Delete reclamation");
+        Button btnupdaterecla = new Button("Update reclamation");
         
 
         btnAddTask.addActionListener(e -> new AddTaskForm(current).show());
         btnListTasks.addActionListener(e -> new ListTasksForm(current).show());
         btnRemoveUser.addActionListener(e-> new RemoveUserForm(current).show());
-            btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
-        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser);
+        btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
+        btnlistrecla.addActionListener(e-> new ListReclaForm(current).show());
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla);
 
     }
 

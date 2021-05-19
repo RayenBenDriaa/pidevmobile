@@ -62,7 +62,7 @@ public class ServiceReclamation {
         return resultOK;
     }
 
-    public ArrayList<Reclamation> parseUsers(String jsonText){
+    public ArrayList<Reclamation> parseReclamation(String jsonText){
         try {
             users=new ArrayList<>();
             JSONParser j = new JSONParser();// Instanciation d'un objet JSONParser permettant le parsing du résultat json
@@ -80,7 +80,7 @@ public class ServiceReclamation {
             En fait c'est la clé de l'objet qui englobe la totalité des objets 
                     c'est la clé définissant le tableau de tâches.
             */
-            Map<String,Object> usersListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
+            Map<String,Object> reclaListJson = j.parseJSON(new CharArrayReader(jsonText.toCharArray()));
             
               /* Ici on récupère l'objet contenant notre liste dans une liste 
             d'objets json List<MAP<String,Object>> ou chaque Map est une tâche.               
@@ -93,19 +93,19 @@ public class ServiceReclamation {
             Pour le cas d'un tableau (Json Array) contenant plusieurs objets
             sa valeur est une liste d'objets Json, donc une liste de Map
             */
-            List<Map<String,Object>> list = (List<Map<String,Object>>)usersListJson.get("root");
+            List<Map<String,Object>> list = (List<Map<String,Object>>)reclaListJson.get("root");
             
             //Parcourir la liste des tâches Json
             for(Map<String,Object> obj : list){
                 //Création des tâches et récupération de leurs données
                 Reclamation t = new Reclamation();
                 
-                float id = Float.parseFloat(obj.get("id_reclamation").toString()) ;
+                float id = Float.parseFloat(obj.get("id_recla").toString()) ;
                 t.setId_reclamation((int)id);
                 
+                
                 t.setText_reclamation(obj.get("text").toString());
-                float id1 = Float.parseFloat(obj.get("id_user").toString()) ;
-                t.setIduser((int)id1);
+              
               
                 //Ajouter la tâche extraite de la réponse Json à la liste
                users.add(t);
@@ -159,13 +159,13 @@ public class ServiceReclamation {
     }
     
     public ArrayList<Reclamation> getAllReclamations(){
-        String url = Statics.BASE_URL+"/admin/user/user/apiusers";
+        String url = Statics.BASE_URL+"/reclamationfront/reclamation/apireclamation";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
             public void actionPerformed(NetworkEvent evt) {
-                users = parseUsers(new String(req.getResponseData()));
+                users = parseReclamation(new String(req.getResponseData()));
                 req.removeResponseListener(this);
             }
         });
