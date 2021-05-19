@@ -1,0 +1,32 @@
+public class HomeForm extends Form {
+        Form current;
+
+    public HomeForm() {
+        
+        
+        current=this;
+        setTitle("Home");
+        setLayout(BoxLayout.y());
+        
+        add(new Label("Choose an option"));
+        Button btnAddVoiture = new Button("Add Voiture");
+        Button btnListVoiture = new Button("List Voiture");
+        Button btnAddLocationv = new Button("Add Location");
+        Button btnListLocationv = new Button("List Location");
+        
+       btnListVoiture.addActionListener(e-> new ListVoitureForm(current).show());
+        btnAddVoiture.addActionListener(e-> new AddVoitureForm(current).show());
+        
+        btnAddLocationv.addActionListener(e-> new AddLocationvForm(current).show());
+        btnListLocationv.addActionListener(e-> new ListLocationvForm(current).show());
+        
+        addAll(btnAddVoiture,btnListVoiture,btnAddLocationv,btnListLocationv);
+        
+        
+        
+    }
+ 
+    
+    
+}
+
