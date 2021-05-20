@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.myapp.entities.gui.Evenement;
+package com.mycompany.myapp.gui;
 
-import com.mycompany.myapp.entities.gui.Sponsor.MenuLocation;
+
 import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.User;
-import com.mycompany.myapp.entities.gui.MenuEventSponsor;
+import com.mycompany.myapp.entities.Evenement;
+
+
 
 /**
  *
@@ -20,7 +21,7 @@ import com.mycompany.myapp.entities.gui.MenuEventSponsor;
 public class MenuEvent extends Form{
     Form current;
 
-    public MenuEvent(User u) {
+    public MenuEvent(Evenement u) {
                 current=this;
         setTitle("Gestions des Evenements");
         setLayout(BoxLayout.y());
@@ -35,9 +36,9 @@ public class MenuEvent extends Form{
         btnListEvents.addActionListener(e-> new ListEvent(u).show());
         
         //Tool Bar
-        getToolbar().addCommandToSideMenu("Home", null, e -> new MenuEventSponsor().show());
+        
         getToolbar().addCommandToSideMenu("Gestions des Evenements", null, e -> new MenuEvent(u).show());
-        getToolbar().addCommandToSideMenu("Gestions des Sponsors", null, e -> new MenuLocation(u).show());
+        
 
         addAll(btnAjoutEvent,btnListEvents,btnStat);
 

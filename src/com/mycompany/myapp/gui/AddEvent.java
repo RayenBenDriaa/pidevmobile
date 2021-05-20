@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.myapp.entities.gui.Evenement;
+package com.mycompany.myapp.gui;
 
 import com.codename1.capture.Capture;
 import com.codename1.components.FloatingActionButton;
 import static com.codename1.components.FloatingActionButton.createFAB;
-import com.codename1.datatransfer.DropTarget;
-import com.codename1.ext.filechooser.FileChooser;
+
+
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.io.NetworkEvent;
@@ -45,10 +45,9 @@ import com.codename1.ui.spinner.Picker;
 import com.codename1.ui.util.ImageIO;
 import com.codename1.util.Base64;
 import com.mycompany.myapp.entities.Evenement;
-import com.mycompany.myapp.entities.User;
-import com.mycompany.myapp.entities.Velo;
-import com.mycompany.myapp.entities.services.ServiceEvenement;
-import com.mycompany.myapp.entities.services.ServiceVelo;
+
+import com.mycompany.myapp.services.ServiceEvenement;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
@@ -70,7 +69,7 @@ public class AddEvent extends Form{
    Form detailsForm;
    String Imagecode;
     ServiceEvenement sa= new ServiceEvenement();
-    public AddEvent(Form previous,User u) {
+    public AddEvent(Form previous,Evenement u) {
         setTitle("Ajouter Evennement");
         setLayout(BoxLayout.y());
 
@@ -98,28 +97,7 @@ public class AddEvent extends Form{
         fabStyle.setBgTransparency(50);
         fabStyle.setBgColor(0xf05f5f);
         
-        if (DropTarget.isSupported()) {
-        DropTarget dnd = DropTarget.create((evt)->{
-        String srcFile = (String)evt.getSource();
-        System.out.println("Src file is "+srcFile);
-       
-       String  maChaine = srcFile;
-      filePath= maChaine.substring(19,srcFile.length());
-               //maChaine.replace("http://localhost/jardin1/web/", "");
-System.out.println(filePath);
-        System.out.println("Location: "+evt.getX()+", "+evt.getY());
-        if (srcFile != null) {
-            try {
-                Image img = Image.createImage(FileSystemStorage.getInstance().openInputStream(srcFile));
-                c.add(img);
-                // c3.removeComponent(imgv);
-                revalidate();
-            } catch (Exception ex) {
-                System.out.println(ex);
-            }
-        } 
-    }, Display.GALLERY_IMAGE);
-}
+
                 Label lrate = new Label("voter !");
 
         Slider SN = createStarRankSlider();

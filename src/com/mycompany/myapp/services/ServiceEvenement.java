@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.myapp.entities.services;
+package com.mycompany.myapp.services;
 
 import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
@@ -15,8 +15,7 @@ import com.codename1.l10n.SimpleDateFormat;
 import com.codename1.messaging.Message;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.entities.Evenement;
-import com.mycompany.myapp.entities.Velo;
-import com.mycompany.myapp.entities.User;
+
 
 import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
@@ -37,7 +36,7 @@ public class ServiceEvenement {
     public static ServiceEvenement instance=null;
     public boolean resultOK;
     private ConnectionRequest req;
-    public ServiceUser su = new ServiceUser();
+    
     public ServiceEvenement() {
          req = new ConnectionRequest();
     }
@@ -52,7 +51,7 @@ public class ServiceEvenement {
 
 
     public boolean addEvent(Evenement t) {
-        String url = Statics.BASE_URL + "Evenement/add?nom="+t.getNom_event()+ "&startat="+t.getStart_at()+"&endat=" + t.getEnd_at()+ "&ville="+ t.getVille()+ "&description=" + t.getDescription()+ "&image="+t.getImage()+ "&rating="+t.getRating(); //création de l'URL
+        String url = Statics.BASE_URL + "/Evenement/add?nom="+t.getNom_event()+ "&startat="+t.getStart_at()+"&endat=" + t.getEnd_at()+ "&ville="+ t.getVille()+ "&description=" + t.getDescription()+ "&image="+t.getImage()+ "&rating="+t.getRating(); //création de l'URL
                req.setUrl(url);
                System.out.println(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -66,7 +65,7 @@ public class ServiceEvenement {
         return resultOK;
     }
     public boolean editEvent(Evenement t) {
-        String url = Statics.BASE_URL + "Evenement/edit?id="+t.getId_event()+"&nom="+t.getNom_event()+ "&startat="+t.getStart_at()+"&endat=" + t.getEnd_at()+ "&ville="+ t.getVille()+ "&description=" + t.getDescription()+ "&image="+t.getImage()+ "&rating="+t.getRating(); //création de l'URL
+        String url = Statics.BASE_URL + "/Evenement/edit?id="+t.getId_event()+"&nom="+t.getNom_event()+ "&startat="+t.getStart_at()+"&endat=" + t.getEnd_at()+ "&ville="+ t.getVille()+ "&description=" + t.getDescription()+ "&image="+t.getImage()+ "&rating="+t.getRating(); //création de l'URL
                req.setUrl(url);
                System.out.println(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -81,7 +80,7 @@ public class ServiceEvenement {
     }
     
     public boolean deleteEvent(Evenement t) {
-        String url = Statics.BASE_URL + "Event/del?id=" + t.getId_event();
+        String url = Statics.BASE_URL + "/Event/del?id=" + t.getId_event();
                req.setUrl(url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
@@ -144,7 +143,7 @@ public class ServiceEvenement {
 
     
     public ArrayList<Evenement> getAllEvents(){
-        String url = Statics.BASE_URL+"affmobEvent";
+        String url = Statics.BASE_URL+"/affmobEvent";
                 System.out.println(url);
 
         req.setUrl(url);

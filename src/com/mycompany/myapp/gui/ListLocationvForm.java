@@ -63,7 +63,11 @@ String urlImage = "back-logo.jpeg";
         
         
         Container cnt=BorderLayout.west(Image);
-            TextArea nom = new TextArea(n.getNom()+n.getPrenom()+String.valueOf(n.getNumerodetelephone()));
+        TextArea nom = new TextArea(n.getNom());
+
+            TextArea prenom = new TextArea(n.getPrenom());
+           TextArea num = new TextArea(String.valueOf(n.getNumerodetelephone()));
+           // TextArea nom = new TextArea(n.getNom()+n.getPrenom()+String.valueOf(n.getNumerodetelephone()));
             //TextArea prenom = new TextArea(n.getPrenom());
            // TextArea num = new TextArea(n.getNumerodetelephone());
                        //TextArea date1 = new TextArea(n.getStartat());
@@ -126,7 +130,7 @@ String urlImage = "back-logo.jpeg";
 //         BoxLayout.encloseX(Supprimer),
 //         BoxLayout.encloseX(Modifier)
 //         ));
-            cnt.add(BorderLayout.WEST, BoxLayout.encloseY(nom,Modifier,Supprimer));
+            cnt.add(BorderLayout.WEST, BoxLayout.encloseY(nom,prenom,num,Modifier,Supprimer));
             add(cnt); 
             }
                

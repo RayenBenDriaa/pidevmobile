@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
  */
 public class Sms {
       public static final String ACCOUNT_SID = "";
-    public static final String AUTH_TOKEN = "";
+    public static final String AUTH_TOKEN = "push ";
 
     public static void send(String num) throws URISyntaxException {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);

@@ -9,6 +9,9 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.mycompany.myapp.gui.MenuEvent;
+import com.mycompany.myapp.entities.Evenement;
+
 
 /**
  *
@@ -22,6 +25,8 @@ public class HomeForm extends Form {
     la méthode showBack*/
     
     public HomeForm() {
+        Evenement u = new Evenement();
+
         current = this; //Récupération de l'interface(Form) en cours
         setTitle("Home");
         setLayout(BoxLayout.y());
@@ -35,10 +40,12 @@ public class HomeForm extends Form {
         Button btnlistrecla = new Button("List reclamation");
         Button btnremoverecla = new Button("Delete reclamation");
         Button btnupdaterecla = new Button("Update reclamation");
-          Button btnAddVoiture = new Button("Add Voiture");
+        Button btnAddVoiture = new Button("Add Voiture");
         Button btnListVoiture = new Button("List Voiture");
         Button btnAddLocationv = new Button("Add Location");
         Button btnListLocationv = new Button("List Location");
+        Button btnAide = new Button("Gestions des Evenements");
+      
         
        btnListVoiture.addActionListener(e-> new ListVoitureForm(current).show());
         btnAddVoiture.addActionListener(e-> new AddVoitureForm(current).show());
@@ -52,7 +59,9 @@ public class HomeForm extends Form {
         btnRemoveUser.addActionListener(e-> new RemoveUserForm(current).show());
         btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
         btnlistrecla.addActionListener(e-> new ListReclaForm(current).show());
-        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnListLocationv);
+        btnAide.addActionListener(e-> new MenuEvent(u).show());
+        
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnAide,btnListLocationv);
 
     }
 

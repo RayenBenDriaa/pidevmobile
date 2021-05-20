@@ -71,7 +71,7 @@ public class Stat extends Form{
    protected CategorySeries buildCategoryDataset(String title, double[] values) {
             CategorySeries series = new CategorySeries(title);
             
-            String[] strings = new String[]{"fiat%","aa%", "hh%",};
+            String[] strings = new String[]{"fiat 500%","peugeot 180%", "golf 5%",};
 
             for (int i = 0 ; i != values.length ; i++) {
                 series.add(strings[i], values[i]);
@@ -104,7 +104,7 @@ public class Stat extends Form{
       
      
       
-    super("Newsfeed", BoxLayout.y());
+    super("Nos Voitures", BoxLayout.y());
         Toolbar tb = new Toolbar(true);
         setToolbar(tb);
         getTitleArea().setUIID("Container");
@@ -128,15 +128,15 @@ int hh=0;
         ArrayList<Voiture> list = sc.getAllVoitures();
           for (Voiture a : list) { {
           
-          if(a.getModele().equals("fiat"))
+          if(a.getModele().equals("fiat 500"))
           {
               Hand++;
           }
-          if(a.getModele().equals("aa"))
+          if(a.getModele().equals("peugeot 180"))
           {
               aa++;
           }
-          if(a.getModele().equals("hh"))
+          if(a.getModele().equals("golf 5"))
           {
               hh++;
           }

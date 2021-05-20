@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.myapp.entities.gui.Evenement;
+package com.mycompany.myapp.gui;
 
-import com.mycompany.myapp.entities.gui.Sponsor.MenuLocation;
+
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.MultiButton;
 import com.codename1.components.SpanLabel;
@@ -25,10 +25,9 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.mycompany.myapp.entities.Evenement;
-import com.mycompany.myapp.entities.User;
-import com.mycompany.myapp.entities.Velo;
-import com.mycompany.myapp.entities.gui.MenuEventSponsor;
-import com.mycompany.myapp.entities.services.ServiceEvenement;
+
+
+import com.mycompany.myapp.services.ServiceEvenement;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -39,7 +38,7 @@ import java.util.Date;
 public class ListEvent extends Form{
         Form current;
 
-        public ListEvent(User u) {
+        public ListEvent(Evenement u) {
         setTitle("Liste des Evenements");
         
           Container co;
@@ -125,9 +124,9 @@ public class ListEvent extends Form{
     }
 }, 4);
         //Tool Bar
-        getToolbar().addCommandToSideMenu("Home", null, e -> new MenuEventSponsor().show());
+        
         getToolbar().addCommandToSideMenu("Gestions des Evenements", null, e -> new MenuEvent(u).show());
-        getToolbar().addCommandToSideMenu("Gestions des Sponsors", null, e -> new MenuLocation(u).show());
+        
     }
 
     
