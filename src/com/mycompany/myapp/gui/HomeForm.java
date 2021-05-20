@@ -45,9 +45,20 @@ public class HomeForm extends Form {
         Button btnAddLocationv = new Button("Add Location");
         Button btnListLocationv = new Button("List Location");
         Button btnAide = new Button("Gestions des Evenements");
+         Button btnAddMaisondhote = new Button("Add Maisondhote");
+        Button btnListMaisondhote = new Button("List Maisondhote");
+        
+        Button btnReservation = new Button("Add Reservation");
+        Button btnListreservation = new Button("List Reservation");
+        
+       btnListMaisondhote.addActionListener(e-> new ListMaisonForm(current).show());
+        btnAddMaisondhote.addActionListener(e-> new AddMaisonForm(current).show());
+       
+       btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
+      btnReservation.addActionListener(e-> new AddReservationForm(current).show());
       
         
-       btnListVoiture.addActionListener(e-> new ListVoitureForm(current).show());
+        btnListVoiture.addActionListener(e-> new ListVoitureForm(current).show());
         btnAddVoiture.addActionListener(e-> new AddVoitureForm(current).show());
         
         btnAddLocationv.addActionListener(e-> new AddLocationvForm(current).show());
@@ -62,7 +73,7 @@ public class HomeForm extends Form {
         btnlistrecla.addActionListener(e-> new ListReclaForm(current).show());
         btnAide.addActionListener(e-> new MenuEvent(u).show());
         
-        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnAide,btnListLocationv);
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnAide,btnListLocationv,btnReservation,btnListreservation,btnAddMaisondhote,btnListMaisondhote);
 
     }
 

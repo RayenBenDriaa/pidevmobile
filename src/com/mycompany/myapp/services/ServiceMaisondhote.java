@@ -14,7 +14,7 @@ import com.codename1.l10n.ParseException;
 import com.codename1.l10n.SimpleDateFormat;
 import com.codename1.ui.events.ActionListener;
 import com.artefact.myapp.entities.Maisondhote;
-import com.artefact.myapp.utils.Statics;
+import com.mycompany.myapp.utils.Statics;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;

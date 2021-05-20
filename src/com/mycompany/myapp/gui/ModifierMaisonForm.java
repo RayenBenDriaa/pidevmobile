@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.artefact.myapp.gui;
+package com.mycompany.myapp.gui;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;

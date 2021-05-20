@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.artefact.myapp.gui;
+
+import com.codename1.ui.Button;
+import com.codename1.ui.Form;
+import com.codename1.ui.Label;
+import com.codename1.ui.layouts.BoxLayout;
+import static jdk.nashorn.internal.runtime.Debug.id;
+
+/**
+ *
+ * @author Dell
+ */
+public class HomeForm extends Form {
+        Form current;
+
+    public HomeForm() {
+        
+        
+        current=this;
+        setTitle("Home");
+        setLayout(BoxLayout.y());
+        
+        add(new Label("Choose an option"));
+        Button btnAddMaisondhote = new Button("Add Maisondhote");
+        Button btnListMaisondhote = new Button("List Maisondhote");
+        
+        Button btnReservation = new Button("Add Reservation");
+        Button btnListreservation = new Button("List Reservation");
+        
+       btnListMaisondhote.addActionListener(e-> new ListMaisonForm(current).show());
+        btnAddMaisondhote.addActionListener(e-> new AddMaisonForm(current).show());
+       
+       btnListreservation.addActionListener(e-> new ListReservationForm(current).show());
+      btnReservation.addActionListener(e-> new AddReservationForm(current).show());
+        
+        
+        addAll(btnAddMaisondhote,btnListMaisondhote,btnReservation,btnListreservation);
+        
+        
+        
+    }
+ 
+    
+    
+}
+

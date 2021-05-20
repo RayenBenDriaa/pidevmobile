@@ -6,7 +6,7 @@
 package com.artefact.myapp.services;
 
 import com.artefact.myapp.entities.Reservationmaison;
-import com.artefact.myapp.utils.Statics;
+import com.mycompany.myapp.utils.Statics;
 import com.codename1.io.CharArrayReader;
 import com.codename1.io.ConnectionRequest;
 import com.codename1.io.JSONParser;

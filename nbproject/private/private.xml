@@ -5,32 +5,23 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListReclaForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Evenement.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceLocationv.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/entities/user.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Sms.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/RemoveReclaForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListLocationvForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/UpdateUserForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListTasksForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/EditEvent.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/RemoveUserForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Reclamation.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListVoitureForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/entities/Locationv.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceEvenement.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/MyApplication.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceUser.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/entities/user.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Sms.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/utils/Statics.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/RemoveReclaForm.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/services/ServiceReclamation.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/MenuEvent.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddReclaForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListEvent.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/UpdateUserForm.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/Stat.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/ListTasksForm.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/HomeForm.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/RemoveUserForm.java</file>
+            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddTaskForm.java</file>
             <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/UpdateReclaForm.java</file>
-            <file>file:/E:/javafx/WorkshopOarsingJson/src/com/mycompany/myapp/gui/AddEvent.java</file>
         </group>
     </open-files>
 </project-private>
