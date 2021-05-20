@@ -58,10 +58,11 @@ public class HomeForm extends Form {
         btnListTasks.addActionListener(e -> new ListTasksForm(current).show());
         btnRemoveUser.addActionListener(e-> new RemoveUserForm(current).show());
         btnUpdateUser.addActionListener(e-> new UpdateUserForm(current).show());
+        btnAddrecla.addActionListener(e-> new AddReclaForm(current).show());
         btnlistrecla.addActionListener(e-> new ListReclaForm(current).show());
         btnAide.addActionListener(e-> new MenuEvent(u).show());
         
-        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnlistrecla,btnremoverecla,btnupdaterecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnAide,btnListLocationv);
+        addAll(btnAddTask, btnListTasks,btnRemoveUser,btnUpdateUser,btnAddrecla,btnAddVoiture,btnListVoiture,btnAddLocationv,btnAide,btnListLocationv);
 
     }
 

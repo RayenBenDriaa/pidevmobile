@@ -14,10 +14,10 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
-import com.mycompany.myapp.entities.Task;
-import com.mycompany.myapp.services.ServiceUser;
-import com.mycompany.myapp.entities.user;
-import javafx.scene.control.PasswordField;
+
+import com.mycompany.myapp.services.ServiceReclamation;
+import com.mycompany.myapp.entities.Reclamation;
+
 
 /**
  *
@@ -33,31 +33,26 @@ public class AddReclaForm extends Form{
         */
         setTitle("Add a new user");
         setLayout(BoxLayout.y());
-        TextField tfUsername = new TextField("","Username");
-        TextField tfName = new TextField("","nom");
-        TextField tfPrenom = new TextField("","prenom");
-        TextField tfemail = new TextField("","Email");
-        TextField tfPassword = new TextField();
+       
+        TextField tfrecla = new TextField("","recla");
+       
         
         Button btnValider = new Button("Add user");
         
         btnValider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                if ((tfName.getText().length()==0)||(tfUsername.getText().length()==0))
+                if ((tfrecla.getText().length()==0))
                     Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                 else
                 {
                     try {
-                        user t = new user();
-                        t.setEmail(tfemail.getText());
-                        t.setNom(tfName.getText());
-                        t.setPrenom(tfPrenom.getText());
-                        t.setUsername(tfUsername.getText());
-                        t.setPassword("created by codenameone");
+                        Reclamation t = new Reclamation();
+                        t.setText_reclamation(tfrecla.getText());
                         
                         
-                        if( ServiceUser.getInstance().addTask(t))
+                        
+                        if( ServiceReclamation.getInstance().addTask(t))
                             Dialog.show("Success user added","user added ",new Command("OK"));
                         else
                             Dialog.show("ERROR", "Server error", new Command("OK"));
@@ -71,7 +66,7 @@ public class AddReclaForm extends Form{
             }
         });
         
-        addAll(tfUsername,tfName,tfPrenom,tfemail,btnValider);
+        addAll(tfrecla,btnValider);
         getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK
                 , e-> previous.showBack()); // Revenir vers l'interface précédente
                 

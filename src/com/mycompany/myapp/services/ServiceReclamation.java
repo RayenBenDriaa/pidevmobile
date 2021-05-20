@@ -43,7 +43,7 @@ public class ServiceReclamation {
     }
 
     public boolean addTask(Reclamation t) {
-        String url = Statics.BASE_URL+"/admin/user/user/apiadd?nom=" + t.getText_reclamation()+ "&Username=" + t.getIduser(); //création de l'URL
+        String url = Statics.BASE_URL+"/reclamationfront/reclamation/apiadd?text=" + t.getText_reclamation(); //création de l'URL
         req.setUrl(url);// Insertion de l'URL de notre demande de connexion
         req.addResponseListener(new ActionListener<NetworkEvent>() {
             @Override
